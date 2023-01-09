@@ -10,9 +10,12 @@ function AddElements(press) {
 }
 // Function that evaluates the digit and return result
 function solve() {
-    let x = document.getElementById("result").value
-    y = math.evaluate(x)
-    document.getElementById("result").value = y
+    try {
+        output=evaluate(document.getElementById("result").value)
+    } catch (error) {
+        output="Invalid";
+    } 
+    document.getElementById("result").value = output
 }
 // Function that clear the display
 function clr() {
