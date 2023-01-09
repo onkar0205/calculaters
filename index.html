@@ -82,11 +82,10 @@
                         <td><input type="button" class="calbutton" onclick="Display('.')" onkeydown="AddElements(press)"
                                 class="calbutton" value="."></td>
                         <td colspan="2"><input type="button" class="calbutton" value="=" onclick="solve()"> </td>
-                        <!-- <td colspan="2"><input type="button" class="calbutton" onclick="dis('=')"
-                                onkeydown="myFunction(event)" class="calbutton" value="="></td> -->
                     </tr>
                 </table>
             </div>
+
             <!-- Scientific Calculater -->
             <div class="col-md-5 butbox" style="background-color:rgb(175, 179, 177); padding: 0;">
                 <table>
@@ -94,76 +93,82 @@
                         <td colspan="6" class="header">Scientific Calculater</td>
                     </tr>
                     <tr>
-                        <td colspan="6"><input type="text" id="result" class="display"></td>
+                        <td colspan="6"><input type="text" id="Sciresult" class="display"></td>
                     </tr>
                     <!-- 21 -->
                     <tr>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="sin"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="cos"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="tan"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="log"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="ln"></td>
-                        <td><input type="button" class="calbutton" value="C" onclick="clr()" /></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('sin(')"
+                                onkeydown="SciAddElement(event)" value="sin"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('cos(')"
+                                onkeydown="SciAddElement(event)" value="cos"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('tan(')"
+                                onkeydown="SciAddElement(event)" value="tan"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('log(')"
+                                onkeydown="SciAddElement(event)" value="log"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('1')"
+                                onkeydown="SciAddElement(event)" value="ln"></td>
+                        <td><input type="button" class="calbutton" value="C" onclick="Sci_clr()" /></td>
                     </tr>
                     <!-- 22 -->
                     <tr>
-                        <td><input type="button" class="calbutton" onclick="SciDis('7')"
-                                onkeydown="SciMyFunction(event)" value="7"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('8')"
-                                onkeydown="SciMyFunction(event)" value="8"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('9')"
-                                onkeydown="SciMyFunction(event)" value="9"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('9')"
-                                onkeydown="SciMyFunction(event)" value="x!"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('9')"
-                                onkeydown="SciMyFunction(event)" value="^"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="exp"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('7')"
+                                onkeydown="SciAddElement(event)" value="7"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('8')"
+                                onkeydown="SciAddElement(event)" value="8"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('9')"
+                                onkeydown="SciAddElement(event)" value="9"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('!')"
+                                onkeydown="SciAddElement(event)" value="!"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('^(')"
+                                onkeydown="SciAddElement(event)" value="^"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('3.1428')"
+                                onkeydown="SciAddElement(event)" value="π"></td>
                     </tr>
                     <!-- 23 -->
                     <tr>
-                        <td><input type="button" class="calbutton" onclick="SciDis('4')"
-                                onkeydown="SciMyFunction(event)" value="4"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('5')"
-                                onkeydown="SciMyFunction(event)" value="5"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('6')"
-                                onkeydown="SciMyFunction(event)" value="6"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('/')"
-                                onkeydown="SciMyFunction(event)" value="/"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('*')"
-                                onkeydown="SciMyFunction(event)" value="*"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="&radic;"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('4')"
+                                onkeydown="SciAddElement(event)" value="4"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('5')"
+                                onkeydown="SciAddElement(event)" value="5"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('6')"
+                                onkeydown="SciAddElement(event)" value="6"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('/')"
+                                onkeydown="SciAddElement(event)" value="/"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('*')"
+                                onkeydown="SciAddElement(event)" value="*"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('sqrt')"
+                                onkeydown="SciAddElement(event)" value="√("></td>
                     </tr>
                     <!-- 24 -->
                     <tr>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="1"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('2')"
-                                onkeydown="SciMyFunction(event)" value="2"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('3')"
-                                onkeydown="SciMyFunction(event)" value="3"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('+')"
-                                onkeydown="SciMyFunction(event)" value="+"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('-')"
-                                onkeydown="SciMyFunction(event)" value="-"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('1')"
-                                onkeydown="SciMyFunction(event)" value="%"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('1')"
+                                onkeydown="SciAddElement(event)" value="1"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('2')"
+                                onkeydown="SciAddElement(event)" value="2"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('3')"
+                                onkeydown="SciAddElement(event)" value="3"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('+')"
+                                onkeydown="SciAddElement(event)" value="+"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('-')"
+                                onkeydown="SciAddElement(event)" value="-"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('%')"
+                                onkeydown="SciAddElement(event)" value="%"></td>
                     </tr>
                     <!-- 25 -->
                     <tr>
-                        <td colspan="2"><input type="button" class="calbutton" onclick="SciDis('0')"
-                                onkeydown="SciMyFunction(event)" class="calbutton" value="0"></td>
-                        <td><input type="button" class="calbutton" onclick="SciDis('.')"
-                                onkeydown="SciMyFunction(event)" class="calbutton" value="."></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('.')"
+                                onkeydown="SciAddElement(event)" class=" calbutton" value="."></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('0')"
+                                onkeydown="SciAddElement(event)" class="calbutton" value="0"></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay('(')"
+                                onkeydown="SciAddElement(event)" class=" 
+                                calbutton" value="("></td>
+                        <td><input type="button" class="calbutton" onclick="SciDisplay(')')"
+                                onkeydown="SciAddElement(event)" class=" 
+                                calbutton" value=")"></td>
                         <td><input type="button" class="calbutton" onclick="SciBack()" value="&#8592;"></td>
                         </td>
-                        <td colspan="2"><input type="button" class="calbutton" value="=" onclick="SciSolve()"> </td>
+                        <td><input type="button" class="calbutton" value="=" onclick="Sci_solve()"> </td>
                     </tr>
                 </table>
             </div>
